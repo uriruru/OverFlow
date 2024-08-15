@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reuj | Front-End Developer</title>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<a target="_blank" href="https://icons8.com/icon/34301/unreal-engine"></a>
+
+
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="/images/Reu James Profile Image.jpg" alt="Logo"
+          style="border-radius: 50%; padding: 0 15px; height: 25px;">
+        <p style="line-height: 17px; font-weight: bolder; color: #3160c5; font-family: monospace;">ReuJames <br> <span
+            style="font-family: sans-serif; font-size: 13px; color: gray;">Frontend Developer</span></p>
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu" style="font-size: 13px;">
+      <div class="navbar-end">
+        <!-- Navigation items here -->
+
+        <a class="navbar-item" href="">
+          <span>Home</span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <hr>
+          <a style="font-weight: bolder;" class="navbar-link is-arrow" onclick="toggleProjects(event)">
+            Projects
+          </a>
+          <div id="projectsDropdown" class="navbar-dropdown is-boxed" style="display: none;">
+            <a class="navbar-item" href="">
+              Frontend Development
+            </a>
+            <a class="navbar-item" href="">
+              Backend Development
+            </a>
+            <a class="navbar-item" href="">
+              Web Design (Ui Design)
+            </a>
+            <a class="navbar-item" href="">
+              Video Projects
+            </a>
+            <a class="navbar-item" href="">
+              Fullstack Development
+            </a>
+            <a class="navbar-item" href="">
+              Drone Videography
+            </a>
+          </div>
+        </div>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Certificates</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Resume</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Blog</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Services</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Experience</span>
+        </a>
+        <hr>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <style>
+              @keyframes gradientAnimation {
+                0% {
+                  background-position: 0% 50%;
+                }
+
+                50% {
+                  background-position: 100% 40%;
+                }
+
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+
+              .custom-button {
+                background: linear-gradient(-30deg, #313131 0%, #323232 10%, #2c2c2c 62%, #111111 100%);
+                padding: 0 30px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                border: none;
+                animation: gradientAnimation 2s ease-in-out infinite;
+                background-size: 200% 200%;
+              }
+            </style>
+
+            <p class="control">
+              <a class="button is-primary custom-button" href="">
+                <span>Contact</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /* Adjust the z-index as needed */
+    }
+
+    /* Add this CSS to remove hover color and keep text black */
+    .navbar-item:hover {
+      background-color: transparent !important;
+      /* Remove background color on hover */
+      color: black !important;
+      /* Keep text color black on hover */
+    }
+  </style>
+  <script>
+    function toggleProjects(event) {
+      event.preventDefault();
+      var projectsDropdown = document.getElementById('projectsDropdown');
+      projectsDropdown.style.display = projectsDropdown.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Get all the navbar-burger elements
+    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event listener to each of them
+    navbarBurgers.forEach(function (el) {
+      el.addEventListener('click', function () {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  </script>
+
+
+  <section class="hero" style="background-color: rgb(47, 48, 47);">
+
+    <div style="font-size: 12px; padding: 14px;" class="hero">
+      <div class="container has-text-centered" style="max-width: 1000px;">
+
+        <p style="color: white; ">
+          <span>Building & Creating Ui-Friendly Websites. </span>
+          <a href="https://github.com/uriruru" target="_blank"><span
+              style="text-decoration: underline; color: white;">GITHUB</span></a>
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--Section One-->
+  <style>
+    /* Define the bubble background */
+    .bubble-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 40px 40px;
+      pointer-events: none;
+      /* Ensures bubbles don't interfere with content */
+    }
+
+    /* Style the bubbles */
+    .bubble {
+      position: absolute;
+      width: 180px;
+      height: 600px;
+      /* background-color: rgba(74, 222, 113, 0.8);*/
+      /* Blue color with transparency */
+      pointer-events: none;
+      /* Ensures bubbles don't interfere with content */
+    }
+  </style>
+
+  <section id="firstsec" class="hero is-success" style="background-color: whitesmoke; position: relative;">
+    <!-- Bubble background -->
+    <div class="bubble-background">
+      <!-- Bubbles -->
+      <div class="bubble" style="transform: rotate(45deg); background-color: rgba(138, 237, 214, 0.8); top: 10px auto; right: auto;"></div>
+      <div class="bubble" style="transform: rotate(-45deg); background-color: rgba(176, 242, 155, 0.8); top: 300px; right: auto;"></div>
+      <!-- Add more bubbles as needed -->
+       <!-- Dont Add  -->
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+        <style>
+          .title {
+            font-size: clamp(2.5rem, 4vw, 5rem);
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .subtitle {
+            font-size: 18px;
+            text-align: center;
+          }
+
+          @media (max-width: 767px) {
+
+            .title,
+            .subtitle {
+              text-align: left;
+            }
+          }
+        </style>
+
+        <p class="title" style="margin-bottom: 35px; color: rgb(51, 51, 51);">
+          Let's <span style="color: #1364b6;">transform</span> your <span style="color: #54ced7;">ideas</span> into
+          <span style="color: slateblue;">reality</span>.
+        </p>
+
+        <p class="subtitle" style="font-size: 15px; color: black;">
+          A 23-year-old <span style="font-weight: 600;">Frontend Developer</span> based in Calabarzon, Philippines.
+        </p>
+
+        <!--PROEJECTS, EXP, yOUTBE sUBS, yOUTUBE-->
+        <div class="container" style="max-width: 800px; margin-top: 30px;">
+          <div class="columns is-multiline is-mobile" style="text-align: left;">
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="-webkit-text-stroke: #000; background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">3
+                  projects</span>
+                <p style="font-size: 12px;">Personal Projects</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">2
+                  YearsExp</span>
+                <p style="font-size: 12px;">Coding / Designing</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">0
+                  Clients</span>
+                <p style="font-size: 12px;">Freelance Projects</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">39K
+                  Views</span>
+                <p style="font-size: 12px;">Youtube Audience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="hero" style="margin-top: -40px; background-color: whitesmoke;">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="font-size: 18px;">
+
+        <div style="margin-top: -20px;">
+
+          <!--
+            <button style="color: white; border-radius: 3px; background-color: #066ed7; border: none; padding: 10px 25px; font-size: 15px; max-width: 2000px;"> 
+              About Me
+            </button>            
+            -->
+
+          <button
+            style="font-weight: bolder; color: white; border-radius: 3px; border: none; padding: 10px 25px; font-size: 15px; 
+            max-width: 2000px; background: linear-gradient(-30deg, #202020 0%, #292929 10%, #2d2c2c 62%, #343434 100%);"
+            id="seeMoreButton" onclick="toggleText()">Resume
+            <span id="dots"></span>
+          </button>
+
+
+          <div id="moreText" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+              <div class="column is-8-desktop mystic-class-name">
+
+                <script type="module" src="https://unpkg.com/rough-notation?module"></script>
+                <script type="module" src="index.js"></script>
+
+                <strong
+                  style="color: black; margin-top: 25px; margin-bottom: 15px; line-height: 45px; text-align: left; float: left; font-size: 45px; font-family: sans-serif;">
+                  Hello! I'm Reu James, a developer based in Philippines.</strong><br><br>
+                <p style="color: black; font-family: sans-serif; font-size: 16px; text-align: left;">I was a Student at
+                  <a style="font-weight: bolder;" target="_blank"
+                    href="https://www.google.com.ph/search?q=adventist+university+of+the+philippines&client=safari&channel=iphone_bm&sxsrf=APwXEdfLqIe5YtiYluTgYZBroGptFBG64Q%3A1687433406188&source=hp&ei=vjCUZKnxCOeb2roP66uH2Ag&iflsig=AOEireoAAAAAZJQ-zvI7SYMertc2xWd-pYu-LOQmYfsJ&gs_ssp=eJzj4tTP1TcwyTAzKzZg9FJPTClLzSvJLC5RKM3LLEstKs4sqVTIT1MoyUhVKMjIzMksKMjMSy0GAMn1Eps&oq=ad&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCC4QigUQJzIHCCMQigUQJzILCAAQgAQQsQMQgwEyDQguEIoFELEDEIMBEEMyCwgAEIAEELEDEIMBMggIABCABBCxAzILCAAQgAQQsQMQgwEyBQgAEIAEMggIABCABBCxAzILCAAQgAQQsQMQgwE6BAgjECc6BwguEIoFEEM6BwgAEIoFEEM6EQguEIAEELEDEIMBEMcBENEDUABYuwRg0A5oAHAAeACAAbkBiAG_ApIBAzAuMpgBAKABAQ&sclient=gws-wiz">
+                    <span class="aup">Adventist University of the Philippines</span></a> where i spent my College years
+                  learning Front-End & Backend Development.
+                  I am a very passionate developer with years of experience
+                  in developing fully responsive Websites, functional Websites, and user-friendly websites.
+
+                  <style>
+                    .aup {
+                      font-weight: bolder;
+                    }
+
+                    .aup:hover {
+                      color: rgb(215, 215, 215);
+                    }
+                  </style>
+
+                  <br><br>
+                  My focus is to create visually appealing and intuitive websites that provide a seamless user
+                  experience.
+                </p>
+
+
+                <br>
+                <br>
+
+              </div>
+
+
+              <div class="column is-3-desktop mystic-class-name">
+                <img src="/images/hacker hoodie.jpg" alt="">
+              </div>
+            </div>
+
+            <hr>
+
+            <!--Another column for skills-->
+
+            <br>
+
+            <div>
+              <strong style="padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Tech Stacks</strong>
+            </div>
+
+            <br>
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>FRONTEND DEVELOPMENT</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">HTML5 /
+                  CSS3</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Javascript</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Git &
+                  Github
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  GIT</li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>FRAMEWORKS</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Bootstrap</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  React</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Bulma
+                </li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>BACKEND Development</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Core
+                  Java</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  Python</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">PHP
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Jquery
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">MySQL
+                </li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>DESIGNING</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Responsive Web Design</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Ui
+                  Design</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Wordpress</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Ux
+                  Design (Basics)</li>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Add CONTENT HERE -->
+
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <script>
+    function toggleText() {
+      var moreText = document.getElementById("moreText");
+      var button = document.getElementById("seeMoreButton");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        setTimeout(function () {
+          moreText.style.opacity = "1";
+        }, 10);
+        button.innerHTML = "Back";
+      } else {
+        moreText.style.opacity = "0";
+        setTimeout(function () {
+          moreText.style.display = "none";
+        }, 500);
+        button.innerHTML = "My Skills";
+      }
+    }
+  </script>
+
+  <br>
+
+  <section class="hero" style="background-color: white; margin-top: -30px;">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+        <p class="title" style="font-size: 55px; color: rgb(105, 105, 105);">
+          <span style="color: black;">Help is here.</span> Whenever and however you need it.
+        </p>
+        <br>
+
+        <div class="columns is-centered" style="gap: 10px;">
+          <div class="column is-3-desktop image-container">
+            <strong style="float: left; color: black;">Need Technical help?</strong><br>
+            <p style="font-size: 15px; color: rgb(86, 86, 87); text-align: left;">Ask a Specialist</p>
+            <p style="text-align: left; color: black;">Developer | Designer</p>
+            <img src="/images/edit1.png" alt="">
+          </div>
+
+          <hr>
+
+          <div class="column is-3-desktop image-container" style="border: none; background-color: #292929;">
+            <p style="color: rgb(202, 202, 202); text-align: left;">Let's work together!</p>
+            <strong
+              style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; float: left; color: white; font-size: 23px; text-align: left;"><span
+                style="color: rgb(238, 121, 18);">Service and support</span></strong>
+
+            <p style="margin-top: 40px; color: white; text-align: left;">Coding</p>
+
+            <br>
+            <br>
+
+            <div class="container nobackwhite" style="max-width: 800px; margin-top: 30px;">
+              <div class="columns is-multiline is-mobile nobackwhite" style="text-align: center;">
+
+
+                <div class="column is-full-mobile is-three-quarter-desktop nobackwhite"
+                  style="padding: 3px; margin-top: -50px;">
+                  <div class="box nobackwhite" id="boxxx"
+                    style="background-color: #292929; font-size: clamp(16px, 2.5vw, 23px); font-weight: bold;">
+                    <style>
+                      .lottie-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: auto;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        /* Centers the container horizontally */
+                      }
+                    </style>
+
+                    <div class="lottie-container">
+                      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                      <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_7ktgdzfj.json"
+                        background="transparent" speed="1" style="margin-top: 20px; width: 100%; height: 100%;" loop
+                        autoplay></lottie-player>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+          </div>
+          <style>
+            .image-container {
+              border: 1px solid white;
+              border-radius: 8px;
+              box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+              transition: border-width 0.3s, box-shadow 0.3s;
+              transition: 0.6s ease;
+            }
+
+            .image-container img {
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              /* Remove mo itong margin-bottom at margin, ito kasi yung nag pa responsive sa image mo sa box para maibaba mo img e */
+              margin-bottom: -20px;
+            }
+
+            .image-container:hover {
+              transition: 0.6s ease;
+              box-shadow: 0 26px 44px rgba(0, 0, 0, 0.3);
+            }
+          </style>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+</body>
+
+<footer style="background-color: white; padding: 25px;" class="footer">
+  <div class="content has-text-centered">
+    <p style="color: rgb(188, 187, 187);">
+      <strong style="color: rgb(44, 44, 44);">Developed & Designed</strong> by <a style="font-weight: bolder;"
+        href="">Reu
+        James</a>.
+    </p>
+  </div>
+</footer>
+
+</html>
